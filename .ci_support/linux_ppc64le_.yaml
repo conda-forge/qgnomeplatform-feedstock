@@ -20,6 +20,8 @@ glib:
 - '2'
 pango:
 - '1.50'
+qt_main:
+- '5.15'
 target_platform:
 - linux-ppc64le
 zip_keys:
