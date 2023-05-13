@@ -1,4 +1,4 @@
-{% set version = "0.9.0" %}
+{% set version = "0.9.1" %}
 
 package:
   name: qgnomeplatform
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/FedoraQt/qgnomeplatform/archive/{{ version }}.tar.gz
-  sha256: 27c0e238a40b56814418a55ee553438e30e2ca5cce02cfb116703452c21dab17
+  sha256: f85e0aa521c3e2f7f59a0fe98360fae30acd02b6940af9e86b4db9c17e02e807
 
 build:
   skip: true  # [not linux]
@@ -52,7 +52,7 @@ test:
 
 about:
   home: https://github.com/FedoraQt/QGnomePlatform
-  summary: 'QGnomePlatform is a Qt Platform Theme designed to use as many of the GNOME settings as possible in unmodified Qt applications.'
+  summary: QGnomePlatform is a Qt Platform Theme designed to use as many of the GNOME settings as possible in unmodified Qt applications.
   license: LGPL-2.1-or-later
   license_family: LGPL
   license_file: LICENSE
