@@ -40,13 +40,6 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/qgnomeplatform-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
                 </a>
               </td>
-            </tr><tr>
-              <td>linux_ppc64le</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18831&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/qgnomeplatform-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_" alt="variant">
-                </a>
-              </td>
             </tr>
           </tbody>
         </table>
@@ -60,7 +53,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-qgnomeplatform-green.svg)](https://anaconda.org/conda-forge/qgnomeplatform) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/qgnomeplatform.svg)](https://anaconda.org/conda-forge/qgnomeplatform) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/qgnomeplatform.svg)](https://anaconda.org/conda-forge/qgnomeplatform) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/qgnomeplatform.svg)](https://anaconda.org/conda-forge/qgnomeplatform) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-qgnomeplatform6-green.svg)](https://anaconda.org/conda-forge/qgnomeplatform6) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/qgnomeplatform6.svg)](https://anaconda.org/conda-forge/qgnomeplatform6) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/qgnomeplatform6.svg)](https://anaconda.org/conda-forge/qgnomeplatform6) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/qgnomeplatform6.svg)](https://anaconda.org/conda-forge/qgnomeplatform6) |
 
 Installing qgnomeplatform
 =========================
@@ -72,41 +65,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `qgnomeplatform` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `qgnomeplatform6` can be installed with `conda`:
 
 ```
-conda install qgnomeplatform
-```
-
-or with `mamba`:
-
-```
-mamba install qgnomeplatform
-```
-
-It is possible to list all of the versions of `qgnomeplatform` available on your platform with `conda`:
-
-```
-conda search qgnomeplatform --channel conda-forge
+conda install qgnomeplatform6
 ```
 
 or with `mamba`:
 
 ```
-mamba search qgnomeplatform --channel conda-forge
+mamba install qgnomeplatform6
+```
+
+It is possible to list all of the versions of `qgnomeplatform6` available on your platform with `conda`:
+
+```
+conda search qgnomeplatform6 --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search qgnomeplatform6 --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search qgnomeplatform --channel conda-forge
+mamba repoquery search qgnomeplatform6 --channel conda-forge
 
-# List packages depending on `qgnomeplatform`:
-mamba repoquery whoneeds qgnomeplatform --channel conda-forge
+# List packages depending on `qgnomeplatform6`:
+mamba repoquery whoneeds qgnomeplatform6 --channel conda-forge
 
-# List dependencies of `qgnomeplatform`:
-mamba repoquery depends qgnomeplatform --channel conda-forge
+# List dependencies of `qgnomeplatform6`:
+mamba repoquery depends qgnomeplatform6 --channel conda-forge
 ```
 
 
