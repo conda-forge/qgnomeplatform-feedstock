@@ -1,7 +1,7 @@
 {% set version = "0.9.1" %}
 
 package:
-  name: qgnomeplatform
+  name: qgnomeplatform6
   version: {{ version }}
 
 source:
@@ -19,7 +19,7 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - make
-    - qt-main                            # [build_platform != target_platform]
+    - qt6-main                           # [build_platform != target_platform]
     - sysroot_linux-64 2.17              # [linux]
     - {{ cdt('mesa-libgl-devel') }}      # [linux]
     - {{ cdt('mesa-libegl') }}           # [linux]
@@ -29,9 +29,9 @@ requirements:
     - {{ cdt('libglvnd-glx') }}          # [linux]
     - {{ cdt('libglvnd-egl') }}          # [linux]
   host:
-    - qt-main
-    - qt-wayland
-    - adwaita-qt
+    - qt6-main
+    - qt6-wayland
+    - adwaita-qt6
     - gsettings-desktop-schemas
     - gtk3
     - gdk-pixbuf
@@ -47,7 +47,7 @@ requirements:
 test:
   commands:
     - test -f "${PREFIX}/plugins/platformthemes/libqgnomeplatformtheme.so"
-    - test -f "${PREFIX}/lib/libqgnomeplatform.so"
+    - test -f "${PREFIX}/lib/libqgnomeplatform6.so"
     - test -f "${PREFIX}/plugins/wayland-decoration-client/libqgnomeplatformdecoration.so"
 
 about:
@@ -58,5 +58,6 @@ about:
   license_file: LICENSE
 
 extra:
+  feedstock-name: qgnomeplatform
   recipe-maintainers:
     - hmaarrfk
