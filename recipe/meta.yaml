@@ -46,9 +46,9 @@ requirements:
 
 test:
   commands:
-    - test -f "${PREFIX}/plugins/platformthemes/libqgnomeplatformtheme.so"
+    - test -f "${PREFIX}/lib/qt6/plugins/platformthemes/libqgnomeplatformtheme.so"
     - test -f "${PREFIX}/lib/libqgnomeplatform6.so"
-    - test -f "${PREFIX}/plugins/wayland-decoration-client/libqgnomeplatformdecoration.so"
+    - test -f "${PREFIX}/lib/qt6/plugins/wayland-decoration-client/libqgnomeplatformdecoration.so"
 
 about:
   home: https://github.com/FedoraQt/QGnomePlatform
