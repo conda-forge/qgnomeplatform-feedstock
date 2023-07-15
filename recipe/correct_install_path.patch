@@ -1,0 +1,45 @@
+diff --git a/src/color-schemes/CMakeLists.txt b/src/color-schemes/CMakeLists.txt
+index e156bfa..9653915 100644
+--- a/src/color-schemes/CMakeLists.txt
++++ b/src/color-schemes/CMakeLists.txt
+@@ -1,4 +1,16 @@
+-install(FILES Adwaita.colors DESTINATION ${CMAKE_INSTALL_DATADIR}/color-schemes/)
+-install(FILES AdwaitaDark.colors DESTINATION ${CMAKE_INSTALL_DATADIR}/color-schemes/)
+-install(FILES AdwaitaHighcontrast.colors DESTINATION ${CMAKE_INSTALL_DATADIR}/color-schemes/)
+-install(FILES AdwaitaHighcontrastInverse.colors DESTINATION ${CMAKE_INSTALL_DATADIR}/color-schemes/)
++install(
++    FILES Adwaita.colors
++    DESTINATION ${QT_INSTALL_DATA}/color-schemes/
++)
++install(
++    FILES AdwaitaDark.colors
++    DESTINATION ${QT_INSTALL_DATA}/color-schemes/
++)
++install(
++    FILES AdwaitaHighcontrast.colors
++    DESTINATION ${QT_INSTALL_DATA}/color-schemes/
++)
++install(
++    FILES AdwaitaHighcontrastInverse.colors
++    DESTINATION ${QT_INSTALL_DATA}/color-schemes/
++)
+diff --git a/src/common/gnomesettings.cpp b/src/common/gnomesettings.cpp
+index 95d572f..a028570 100644
+--- a/src/common/gnomesettings.cpp
++++ b/src/common/gnomesettings.cpp
+@@ -265,7 +265,13 @@ static QString colorScheme(bool useHighContrast, bool useDarkVariant)
+         colorScheme = useDarkVariant ? QStringLiteral("AdwaitaDark") : QStringLiteral("Adwaita");
+     }
+ 
+-    return QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/") + colorScheme + QStringLiteral(".colors"));
++    QString colorSchemePath = QDir::cleanPath(QCoreApplication::applicationDirPath() + QStringLiteral("/../share/qt6/color-schemes/"));
++    QString file = colorScheme + QStringLiteral(".colors");
++    if (QDir(colorSchemePath).exists(file)) {
++        return colorSchemePath + file;
++    } else {
++        return QStringLiteral("");
++    }
+ }
+ 
+ void GnomeSettings::loadPalette()
+
