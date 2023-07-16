@@ -7,10 +7,12 @@ package:
 source:
   url: https://github.com/FedoraQt/qgnomeplatform/archive/{{ version }}.tar.gz
   sha256: f85e0aa521c3e2f7f59a0fe98360fae30acd02b6940af9e86b4db9c17e02e807
+  patches:
+    - correct_install_path.patch
 
 build:
   skip: true  # [not linux]
-  number: 0
+  number: 1
 
 requirements:
   build:
