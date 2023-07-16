@@ -9,10 +9,22 @@ source:
   sha256: f85e0aa521c3e2f7f59a0fe98360fae30acd02b6940af9e86b4db9c17e02e807
   patches:
     - correct_install_path.patch
+    # 2023/07 hmaarrfk
+    # I think there is a bug in ubuntu with XDG-Desktop-Portal
+    # I worked with QGnomePlatform
+    # https://github.com/FedoraQt/QGnomePlatform/issues/146
+    # To get to the bottom of it
+    # but it seems that it is either a work in progress
+    # or still an active bug
+    # https://bugs.launchpad.net/ubuntu/+source/xdg-desktop-portal-gnome/+bug/2013116
+    # In either case because there are other pure GTK dialogs just below the logic
+    # in the source, I'm going to patch this out in order to provide users with
+    # a better experience until further notice.
+    - force_gtk_native_dialogis_not_xdg.patch
 
 build:
   skip: true  # [not linux]
-  number: 1
+  number: 2
 
 requirements:
   build:
