@@ -1,0 +1,20 @@
+diff --git a/src/theme/qgnomeplatformtheme.cpp b/src/theme/qgnomeplatformtheme.cpp
+index 99719a6..98cc298 100644
+--- a/src/theme/qgnomeplatformtheme.cpp
++++ b/src/theme/qgnomeplatformtheme.cpp
+@@ -158,13 +158,8 @@ bool QGnomePlatformTheme::usePlatformNativeDialog(QPlatformTheme::DialogType typ
+ QPlatformDialogHelper *QGnomePlatformTheme::createPlatformDialogHelper(QPlatformTheme::DialogType type) const
+ {
+     switch (type) {
+-    case QPlatformTheme::FileDialog: {
+-        if (GnomeSettings::getInstance().canUseFileChooserPortal()) {
+-            return new QXdgDesktopPortalFileDialog;
+-        } else {
+-            return new QGtk3FileDialogHelper;
+-        }
+-    }
++    case QPlatformTheme::FileDialog:
++        return new QGtk3FileDialogHelper();
+     case QPlatformTheme::FontDialog:
+         return new QGtk3FontDialogHelper();
+     case QPlatformTheme::ColorDialog:
