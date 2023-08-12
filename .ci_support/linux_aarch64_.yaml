@@ -24,6 +24,8 @@ glib:
 - '2'
 pango:
 - '1.50'
+qt_main:
+- '5.15'
 target_platform:
 - linux-aarch64
 zip_keys:
