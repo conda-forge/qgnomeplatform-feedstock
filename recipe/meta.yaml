@@ -9,6 +9,8 @@ source:
   sha256: 9446c0d68faccdd0e44039b2089ab4524939a47cfe8c34e50b0368c2b58a5552
   patches:
     - correct_install_path.patch
+    # Update 2023/09/10 I am about 90% sure that this was a bug in Ubuntu 23.04
+    # and that it is resolved in 23.10
     # 2023/07 hmaarrfk
     # I think there is a bug in ubuntu with XDG-Desktop-Portal
     # I worked with QGnomePlatform
@@ -20,11 +22,11 @@ source:
     # In either case because there are other pure GTK dialogs just below the logic
     # in the source, I'm going to patch this out in order to provide users with
     # a better experience until further notice.
-    - force_gtk_native_dialogis_not_xdg.patch
+    # - force_gtk_native_dialogis_not_xdg.patch
 
 build:
   skip: true  # [not linux]
-  number: 0
+  number: 1
 
 requirements:
   build:
