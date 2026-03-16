@@ -30,9 +30,10 @@ build:
 
 requirements:
   build:
-    - pkg-config
+    - {{ stdlib("c") }}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - pkg-config
     - cmake
     - make
     - qt-main                            # [build_platform != target_platform]
