@@ -26,7 +26,7 @@ source:
 
 build:
   skip: true  # [not linux]
-  number: 3
+  number: 2
 
 requirements:
   build:
