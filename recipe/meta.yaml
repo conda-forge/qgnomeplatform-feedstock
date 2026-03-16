@@ -26,7 +26,7 @@ source:
 
 build:
   skip: true  # [not linux]
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -36,7 +36,6 @@ requirements:
     - cmake
     - make
     - qt-main                            # [build_platform != target_platform]
-    - sysroot_linux-64 2.17              # [linux]
   host:
     - qt-main
     - qt-wayland
